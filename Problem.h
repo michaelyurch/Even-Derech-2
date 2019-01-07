@@ -2,15 +2,16 @@
 #define PROBLEM_H
 
 #include <string>
+#include <vector>
 
 class Problem
 {
-	std::string** matrix;
+	std::vector<std::vector<std::string>> matrix;
 public:
-	Problem(std::string** _matrix) {
+	Problem(std::vector<std::vector<std::string>> _matrix) {
         this->matrix = _matrix;
     }
-    std::string** getMatrix() {
+    std::vector<std::vector<std::string>> getMatrix() {
         return this->matrix;
     }
 };
