@@ -7,7 +7,9 @@
 #include "Searcher.h"
 #include "BreadthFirstSearch.h"
 #include "Problem.h"
+
 #include <string>
 #include <vector>
+#include <iostream>
 
 #endif
