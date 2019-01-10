@@ -2,7 +2,10 @@
 #define SEARCHER_ADAPTER_H
 
 #include "Searcher.h"
+#include "Searchable.h"
 #include "Solver.h"
+
+#include <string>
 
 class SearcherAdapter : public Solver
 {
@@ -11,9 +14,9 @@ public:
 	SearcherAdapter(Searcher* _searcher) {
 		this->searcher = _searcher;	
 	}
-	Solution solve(Problem problem) {
-		this->searcher->setMatrix(problem.getMatrix());
-		Solution solution = Solution(this->searcher->getOptimalPath());
+	
+	Solution solve(Searchable* searchable) {
+		Solution solution = this->searcher->search(searchable);
 		return solution;
 	}
 };

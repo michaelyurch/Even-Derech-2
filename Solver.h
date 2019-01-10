@@ -1,13 +1,13 @@
 #ifndef SOLVER_H
 #define SOLVER_H
 
-#include "Problem.h"
+#include "Searchable.h"
 #include "Solution.h"
 
 class Solver
 {
 public:
-	virtual Solution solve(Problem problem) = 0;
+	virtual Solution solve(Searchable* searchable) = 0;
 };
 
 #endif

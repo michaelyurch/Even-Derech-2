@@ -1,5 +1,5 @@
-#ifndef BREADTH_FIRST_SEARCH_H
-#define BREADTH_FIRST_SEARCH_H
+#ifndef DEPTH_FIRST_SEARCH_H
+#define DEPTH_FIRST_SEARCH_H
 
 #include "Searcher.h"
 #include "Searchable.h"
@@ -10,13 +10,13 @@
 #include <map>
 #include <iostream>
 
-class BreadthFirstSearch : public Searcher
+class DepthFirstSearch : public Searcher
 {
 Searchable* searchable;
 int numberOfNodesEvaluated;
 
 public:
-	BreadthFirstSearch();
+	DepthFirstSearch();
 	Solution search(Searchable* _searchable);
 	int getNumberOfNodesEvaluated();
 };

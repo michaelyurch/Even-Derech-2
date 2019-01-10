@@ -6,6 +6,8 @@
 #include "SearcherAdapter.h"
 #include "Searcher.h"
 #include "BreadthFirstSearch.h"
+#include "DepthFirstSearch.h"
+#include "BestFirstSearch.h"
 #include "Problem.h"
 
 #include <string>
