@@ -31,6 +31,10 @@ class State {
         return this->state;
     }
 
+    std::string getCameFrom() {
+        return this->cameFrom;
+    }
+
     double getCost() {
         return this->cost;
     }

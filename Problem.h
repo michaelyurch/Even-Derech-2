@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <math.h>
 
 class Problem : public Searchable
 {
@@ -27,6 +28,8 @@ public:
     std::vector<State> getAllPossibleSDtates(State s);
     std::vector<State> getListOfStates();
     bool isPointInMatrixScope(int coordX, int coordY);
+    double calculateHValue(State s);
+    std::string determineDirection(std::string prevStateStr, std::string curStateStr);
 };
 
 #endif

@@ -1,5 +1,37 @@
 #include "Problem.h"
 
+double Problem::calculateHValue(State s) {
+    
+    int row = this->getXCoord(s.getState());
+    int col = this->getYCoord(s.getState());
+    int rowDest = this->outCoord.getX();
+    int colDest = this->outCoord.getY();
+    return (double)sqrt(pow((double)(row - rowDest), 2) + pow((double)(col - colDest), 2));
+}
+
+std::string Problem::determineDirection(std::string prevStateStr, std::string curStateStr) {
+    int xPrev = this->getXCoord(prevStateStr);
+    int yPrev = this->getYCoord(prevStateStr);
+    int xCur = this->getXCoord(curStateStr);
+    int yCur = this->getYCoord(curStateStr);
+
+    if (xPrev > xCur) {
+        return "up";
+    }
+        
+    if (xPrev < xCur) {
+        return "down";
+    }
+
+    if (yPrev > yCur) {
+        return "left";
+    }
+        
+    if (yPrev < yCur) {
+        return "right";
+    }
+}
+
 Problem::Problem(std::vector<std::vector<std::string>> _matrix, std::string _inCoordinate
         , std::string _outCoordinate) {
 

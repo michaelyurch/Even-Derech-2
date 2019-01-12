@@ -8,6 +8,7 @@
 #include "BreadthFirstSearch.h"
 #include "DepthFirstSearch.h"
 #include "BestFirstSearch.h"
+#include "AStar.h"
 #include "Problem.h"
 
 #include <string>
